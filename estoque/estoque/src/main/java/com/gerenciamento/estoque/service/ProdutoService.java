@@ -109,6 +109,9 @@ public class ProdutoService {
             if (produto.getDescricao() != null) {
                 produtoExistente.setDescricao(produto.getDescricao());
             }
+            if (produto.getDescricao() != null) {
+                produtoExistente.setFornecedor(produto.getFornecedor());
+            }
             produtoExistente.setAtivo(produto.isAtivo());
 
             // Registra a operação de auditoria na tabela de auditoria
@@ -139,7 +142,7 @@ public class ProdutoService {
             audit.setCreateDate(audit.getCreateDate());
             auditRepository.save(audit);
 
-            produtoExistente.setAtivo(false);
+            produtoRepository.deleteById(id);
         } else {
             throw new IllegalArgumentException("ID Invalido");
         }

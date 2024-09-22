@@ -27,4 +27,8 @@ public class Produto extends AbstractEntity{
     @Column(name = "descricao", nullable = false, length = 255)
     private String descricao;
 
+    @Getter @Setter
+    @ManyToOne
+    @JoinColumn(name = "fornecedor_id")
+    private Fornecedor fornecedor;
 }

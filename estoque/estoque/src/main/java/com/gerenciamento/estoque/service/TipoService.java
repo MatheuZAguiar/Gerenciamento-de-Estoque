@@ -106,7 +106,7 @@ public class TipoService {
             audit.setCreateDate(audit.getCreateDate());
             auditRepository.save(audit);
 
-            tipo.setAtivo(false);
+            tipoRepository.deleteById(id);
         } else{
             throw new IllegalArgumentException("ID de tipo inválido!");
         }

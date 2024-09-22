@@ -162,7 +162,7 @@ public class MovimentacaoService {
             auditRepository.save(audit);
 
 
-            movimentacaoExistente.setAtivo(false);
+            movimentacaoRepository.deleteById(id);
         } else {
             throw new IllegalArgumentException("ID Invalido");
         }

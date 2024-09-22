@@ -1,5 +1,6 @@
 package com.gerenciamento.estoque.dto;
 
+import com.gerenciamento.estoque.entity.Fornecedor;
 import com.gerenciamento.estoque.entity.Produto;
 import com.gerenciamento.estoque.entity.Tipo;
 import lombok.*;
@@ -17,6 +18,7 @@ public class ProdutoDTO {
     private String descricao;
     private String codigo;
     private Tipo tipo;
+    private Fornecedor fornecedor;
 
     public ProdutoDTO(Produto produto){
         id = produto.getId();
@@ -26,15 +28,18 @@ public class ProdutoDTO {
         nome = produto.getNome();
         descricao = produto.getDescricao();
         tipo = produto.getTipo();
+        fornecedor = produto.getFornecedor();
     }
 
-    public ProdutoDTO(Long id, boolean ativo, LocalDateTime registro, LocalDateTime atualizar, String nome, String descricao, Tipo tipo){
+    public ProdutoDTO(Long id, boolean ativo, LocalDateTime registro, LocalDateTime atualizar, String nome, String descricao, String codigo, Tipo tipo, Fornecedor fornecedor) {
         this.id = id;
         this.ativo = ativo;
         this.registro = registro;
         this.atualizar = atualizar;
         this.nome = nome;
         this.descricao = descricao;
+        this.codigo = codigo;
         this.tipo = tipo;
+        this.fornecedor = fornecedor;
     }
 }

@@ -151,7 +151,7 @@ public class EstoqueService {
             auditRepository.save(audit);
 
 
-            estoqueExistente.setAtivo(false);
+            estoqueRepository.deleteById(id);
         } else {
             throw new IllegalArgumentException("ID de estoque inválido!");
         }

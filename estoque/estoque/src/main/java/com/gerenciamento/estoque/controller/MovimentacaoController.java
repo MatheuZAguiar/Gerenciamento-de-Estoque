@@ -100,15 +100,15 @@ public class MovimentacaoController {
         }
     }
 
-    @DeleteMapping("/desativar/{id}")
+    @DeleteMapping("/deletar/{id}")
     public ResponseEntity<String> deletar(@PathVariable Long id) {
         try {
             movimentacaoService.deletar(id);
-            return ResponseEntity.ok().body("Registro desativado com sucesso!");
+            return ResponseEntity.ok().body("Registro deletado com sucesso!");
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao desativar o registro");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao deletar o registro");
         }
     }
 }
