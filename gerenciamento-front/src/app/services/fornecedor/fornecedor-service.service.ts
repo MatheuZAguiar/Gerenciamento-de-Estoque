@@ -27,8 +27,15 @@ export class FornecedorServiceService {
     return this.http.get<Fornecedor[]>(this.API, { headers: this.getAuthHeaders() });
   }
 
+  cadastrar(fornecedor: Fornecedor): Observable<string> {
+    return this.http.post(this.API, fornecedor, {
+      headers: this.getAuthHeaders(),
+      responseType: 'text'
+    });
+  }
+
   atualizar(id: number, fornecedor: Fornecedor): Observable<string> {
-    const url = `${this.API}/nome/${id}`;
+    const url = `${this.API}/atualizar/${id}`;
     return this.http.put(url, fornecedor, {
       headers: this.getAuthHeaders(),
       responseType: 'text'
