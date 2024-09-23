@@ -1,1 +1,25 @@
-<p>cadastro works!</p>
+<section id="section-login">
+    <h1 id="h1_titulo">ELEVEN</h1>
+    <form id="form" class="form">
+      <div class="username">
+        <input id="username" type="text" name="username" placeholder="Digite seu Username..."
+          [(ngModel)]="userData.login" />
+        <small>Mensagem de erro</small>
+      </div>
+  
+      <div class="password">
+        <input id="password" type="password" name="senha" placeholder="Digite sua Senha..."
+          [(ngModel)]="userData.password" />
+        <small>Mensagem de erro</small>
+      </div>
+  
+      <div class="role">
+        <input id="role" type="text" name="role" placeholder="Digite o papel do usuario..." [(ngModel)]="userData.role" />
+        <small>Mensagem de erro</small>
+      </div>
+  
+      <button type="submit" nome="acao" value="Cadastrar" (click)="register()">Cadastrar</button>
+      <hr />
+      <button type="submit" nome="acao" value="Logar" (click)="logar()">Login</button>
+    </form>
+  </section>
