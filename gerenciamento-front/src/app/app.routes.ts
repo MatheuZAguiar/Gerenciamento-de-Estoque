@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TipolistComponent } from './components/tipo/tipolist/tipolist.component';
+import { TipoListComponent } from './components/tipo/tipolist/tipolist.component';
 import { ProdutolistComponent } from './components/produto/produtolist/produtolist.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { IndexComponent } from './layout/index/index.component';
@@ -19,7 +19,7 @@ export const routes: Routes = [
   {
     path: "admin", component: IndexComponent, canActivate:[Rotaguard], children: [
       {path: "dashboard", component: DashboardComponent},
-      { path: "tipo", component: TipolistComponent },
+      { path: "tipo", component: TipoListComponent },
       { path: "produto", component: ProdutolistComponent },
       { path: "estoque", component: EstoquelistComponent},
       { path: "movimentacao", component: MovimentacaolistComponent},

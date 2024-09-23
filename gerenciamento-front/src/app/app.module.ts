@@ -6,8 +6,6 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routes';
 import { AppComponent } from './app.component';
-import { TipolistComponent } from './components/tipo/tipolist/tipolist.component';
-import { TipodetailsComponent } from './components/tipo/tipodetails/tipodetails.component';
 import { ProdutodetailsComponent } from './components/produto/produtodetails/produtodetails.component';
 import { ProdutolistComponent } from './components/produto/produtolist/produtolist.component';
 import { DatePipe } from '@angular/common';
@@ -25,6 +23,8 @@ import { LoginComponent } from './components/sistema/login/login.component';
 import { FornecedorlistComponent } from './components/fornecedor/fornecedorlist/fornecedorlist.component';
 import { FornecedordetailsComponent } from './components/fornecedor/fornecedordetails/fornecedordetails.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { TipoListComponent } from './components/tipo/tipolist/tipolist.component';
+import { TipodetailsComponent } from './components/tipo/tipodetails/tipodetails.component';
 
 @NgModule({
   declarations: [
@@ -38,10 +38,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     EstoquelistComponent,
     EstoquedetailsComponent,
     EstoquemovimentacaoComponent,
-    TipolistComponent,
-    TipodetailsComponent,
     ProdutolistComponent,
     ProdutodetailsComponent,
+    TipoListComponent,
+    TipodetailsComponent,
     MovimentacaodetailsComponent,
     MovimentacaolistComponent,
     FornecedorlistComponent,
