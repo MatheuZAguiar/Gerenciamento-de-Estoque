@@ -78,14 +78,6 @@ public class MovimentacaoService {
         movimentacao.setValorTotal(diferenca);
 
         movimentacao.setTotalProduto(movimentacao.getEntrada() - movimentacao.getSaida());
-
-        // Registra a operação de auditoria na tabela de auditoria
-        Audit audit = new Audit();
-        audit.setOperation("CREATE_MOVIMENTACAO");
-        audit.setCreatedBy(audit.getCreatedBy());
-        audit.setCreateDate(audit.getCreateDate());
-        auditRepository.save(audit);
-
         movimentacaoRepository.save(movimentacao);
     }
 
@@ -119,13 +111,6 @@ public class MovimentacaoService {
             movimentacaoExistente.setValorTotal(diferenca);
 
             movimentacaoExistente.setTotalProduto(movimentacao.getEntrada() - movimentacao.getSaida());
-
-            // Registra a operação de auditoria na tabela de auditoria
-            Audit audit = new Audit();
-            audit.setOperation("INSERT_MOVIMENTACAO");
-            audit.setCreatedBy(audit.getCreatedBy());
-            audit.setCreateDate(audit.getCreateDate());
-            auditRepository.save(audit);
 
             movimentacaoRepository.save(movimentacaoExistente);
         } else {

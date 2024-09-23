@@ -1,0 +1,58 @@
+#dashboard {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: #474747;
+    font-family: 'Poppins', sans-serif;
+}
+
+.alert {
+    color: aliceblue;
+    animation: luzIntermitente 8s infinite;
+}
+
+.card {
+    background-color: #5e5e5e;
+    color: aliceblue;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+.card-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.list-group-item {
+    background-color: #5e5e5e;
+    color: #fff;
+    border: none;
+}
+
+.list-group-item:hover {
+    background-color: #6e6e6e;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.text-center {
+    background-color: #474747;
+    color: aliceblue;
+    animation: luzIntermitente 8s infinite;
+}
+
+@keyframes luzIntermitente {
+    0% { text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); }
+    50% { text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); }
+    100% { text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); }
+}

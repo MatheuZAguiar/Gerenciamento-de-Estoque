@@ -20,8 +20,6 @@ import { MovimentacaolistComponent } from './components/movimentacao/movimentaca
 import { EstoquemovimentacaoComponent } from './components/estoque/estoquemovimentacao/estoquemovimentacao.component';
 import { AuthInterceptor } from './interceptors/auth-interceptor';
 import { LoginComponent } from './components/sistema/login/login.component';
-import { FornecedorlistComponent } from './components/fornecedor/fornecedorlist/fornecedorlist.component';
-import { FornecedordetailsComponent } from './components/fornecedor/fornecedordetails/fornecedordetails.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TipoListComponent } from './components/tipo/tipolist/tipolist.component';
 import { TipodetailsComponent } from './components/tipo/tipodetails/tipodetails.component';
@@ -44,8 +42,6 @@ import { TipodetailsComponent } from './components/tipo/tipodetails/tipodetails.
     TipodetailsComponent,
     MovimentacaodetailsComponent,
     MovimentacaolistComponent,
-    FornecedorlistComponent,
-    FornecedordetailsComponent
   ],
   imports: [
     FormsModule,

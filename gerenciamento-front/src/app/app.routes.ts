@@ -10,7 +10,6 @@ import { EstoquelistComponent } from './components/estoque/estoquelist/estoqueli
 import { MovimentacaolistComponent } from './components/movimentacao/movimentacaolist/movimentacaolist.component';
 import { EstoquemovimentacaoComponent } from './components/estoque/estoquemovimentacao/estoquemovimentacao.component';
 import { Rotaguard } from './guards/rotaguard.guard';
-import { FornecedorlistComponent } from './components/fornecedor/fornecedorlist/fornecedorlist.component';
 
 export const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: 'full' },
@@ -23,8 +22,7 @@ export const routes: Routes = [
       { path: "produto", component: ProdutolistComponent },
       { path: "estoque", component: EstoquelistComponent},
       { path: "movimentacao", component: MovimentacaolistComponent},
-      { path: "estoquemovimentacao", component: EstoquemovimentacaoComponent},
-      { path: "fornecedor", component: FornecedorlistComponent},
+      { path: "estoquemovimentacao", component: EstoquemovimentacaoComponent}
     ]
   }
 

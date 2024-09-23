@@ -48,11 +48,4 @@ export class TipoService {
     });
   }
 
-  desativar(id: number): Observable<string> {
-    const url = `${this.API}/deletar/${id}`;
-    return this.http.delete(url, {
-      headers: this.getAuthHeaders(),
-      responseType: 'text'
-    });
-  }
 }

@@ -9,26 +9,26 @@
                 <table class="table table-striped table-bordered table-responsive">
                     <thead>
                         <tr>
-                            <th class="scsscol" scope="col" (click)="sortById()">#ID</th>
-                            <th class="scsscol" scope="col" (click)="sortByNameTipo()">
+                            <th class="text-center" scope="col" (click)="sortById()">#ID</th>
+                            <th class="text-center" scope="col" (click)="sortByNameTipo()">
                                 Tipo
                                 <i class="fas"
                                     [ngClass]="{'fa-arrow-up': sortByNameTipoDirection === 'asc', 'fa-arrow-down': sortByNameTipoDirection === 'desc'}"></i>
                             </th>
-                            <th class="scsscol" scope="col" (click)="sortStatus()">
+                            <th class="text-center" scope="col" (click)="sortStatus()">
                                 Status
                                 <i class="fas"
                                     [ngClass]="{'fa-arrow-up': sortStatusDirection === 'asc', 'fa-arrow-down': sortStatusDirection === 'desc'}"></i>
                             </th>
-                            <th class="scsscol" scope="col" (click)="sortRegistro()">Registrado Em
+                            <th class="text-center" scope="col" (click)="sortRegistro()">Registrado Em
                                 <i class="fas"
                                     [ngClass]="{'fa-arrow-up': sortRegistroDirection === 'asc', 'fa-arrow-down': sortRegistroDirection === 'desc'}"></i>
                             </th>
-                            <th class="scsscol" scope="col" (click)="sortAtualizar()">Atualizado Em
+                            <th class="text-center" scope="col" (click)="sortAtualizar()">Atualizado Em
                                 <i class="fas"
                                     [ngClass]="{'fa-arrow-up': sortAtualizarDirection === 'asc', 'fa-arrow-down': sortAtualizarDirection === 'desc'}"></i>
                             </th>
-                            <th class="scsscol">
+                            <th class="text-center">
                                 Açoes
                             </th>
                         </tr>
@@ -43,8 +43,10 @@
                             <td>
                                 <button class="btn btn-primary" (click)="editar(modal1, tipo, i)">Editar</button>
                             </td>
-                            <td *ngIf="modoLancamento"> <button type="button" class="btn btn-primary"
-                                    (click)="lancamento(tipo)">Lançar</button> </td>
+
+                            <td *ngIf="modoLancamento">
+                                <button type="button" class="btn btn-primary" (click)="lancamento(tipo)">Lançar</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
